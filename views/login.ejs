@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <title>Food Zone</title>
+        <link href="/assets/stylesheets/mystyle.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <div class="all">
+         <% include partials/navigation.ejs%>
+         <% include partials/header.ejs %>
+         <h3>Welcome to CCI Connections!</h3>
+         <h3>Please enter your username and password</h3>
+         <% console.log("details",details); %>
+         <% if (details != undefined) { %>
+         <% details.errors.forEach(function(e){ %>
+         <h3><%= e.param %> : <%= e.msg %></h3>
+         <%  }); } %>
+         <div >
+           <form id="new-form" action="/savedConnection" method="post">
+            <label for="username"> username</label>
+            <input type="text" name="username" placeholder="username" id="username"/>
+            <label for="password">password</label>
+            <input type="text" name="password" placeholder="password" id="password"/>
+            <input type="submit" name="Login" value="Login"/>
+          </form>
+         </div>  
+        <% include partials/footer.ejs %>
+      </div>
+   </body>
+</html>

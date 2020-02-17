@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Food Zone</title>
+    <link
+      href="/assets/stylesheets/mystyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <% include partials/navigation.ejs {clicked:clicked}%> <% include
+      partials/header.ejs %>
+      <div class="connContent">
+        <h4>Food Zone Evens</h4>
+        <ol>
+          <% topics.forEach(function(item){ %>
+          <li class="connectionsList">
+            <%= item %>
+            <ul>
+              <% connectionsObj.forEach(function(d){if(d.topic === item){ %> <%
+              var ref = 'connection?connID='; %>
+              <li class="activity">
+                <a href="<%= ref + d.id;%>" id="<%= d.id;%>"><%= d.name;%></a>
+              </li>
+              <% } }); %>
+            </ul>
+          </li>
+          <% }); %>
+        </ol>
+      </div>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

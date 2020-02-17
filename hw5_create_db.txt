@@ -1,0 +1,99 @@
+use foodZone 
+
+db.getCollectionNames().forEach(function(c) { if (c.indexOf("system.") == -1) db[c].drop(); })
+
+db.Users.insertMany ([{
+	userId: "user_01",
+	firstName: "Atefeh",
+	lastName: "Mahdavi",
+	email: "mahdavi.atefeh@gmail.com",
+	address: ["address1",
+	"address2",
+	"Charlotte",
+	"NC",
+	"28213",
+	"US"],
+	username: "amahdavi@uncc.edu",
+	password: "Zxcv!1234"
+	},{
+	userId: "user_02",
+	firstName: "Hana",
+	lastName: "Maleki",
+	email: "hana.maleki@gmail.com",
+	address: ["address1",
+	"address2",
+	"Charlotte",
+	"NC",
+	"28213",
+	"US"],
+	 username: "hmaleki@uncc.edu",
+	password: "Asdf!1234"}])
+
+db.Connections.insertMany([{
+	id: 'social_01',
+	userId: "user_01",
+	name: 'Food and Culture panel',
+	topic: 'International Food Social Event',
+	details: 'Taste food from any country you can imagine.',
+	location: 'Charlotte',
+	dt: ['Friday, October 10 2019', '4:30pm - 5:30pm'],
+},{
+	id: 'social_02',
+	userId: "user_02",
+	name: 'Music and Food Club',
+	topic: 'International Food Social Event',
+	details: 'Taste food from any country you can imagine.',
+	location: 'Charlotte',
+	dt: ['Friday, October 13 2019', '6:30pm - 8:30pm'],
+},{
+	id: 'social_03',
+	userId: "user_01",
+	name: 'American food with chef Ramsy',
+	topic: 'International Food Social Event',
+	details: 'Cook along with chef Ramsy.',
+	location: 'Charlotte',
+	dt: ['Satureday, October 18 2019', '11:30am - 1:30pm'],
+},{
+	id: 'cooking_01',
+	userId: "user_02",
+	name: 'Share your reciepe cooking class',
+	topic: 'Healthy Cooking Club',
+	details: 'you can share your reciepe with your fellow cooks and make friends.',
+	location: 'Charlotte',
+	dt: ['Satureday, October 18 2019', '4:30pm - 7:00pm'],
+},{
+	id: 'cooking_02',
+	name: 'Salad club',
+	userId: "user_02",
+	topic: 'Healthy Cooking Club',
+	details: 'Learn how to make delicious salads.',
+	location: 'Charlotte',
+	dt: ['Satureday, October 18 2019', '4:30pm - 7:00pm'],
+},{
+	id: 'cooking_03',
+	userId: "user_01",
+	name: 'Make Smoothies together social event',
+	topic: 'Healthy Cooking Club',
+	details: 'Learn how to make delicious smoothies.',
+	location: 'Charlotte',
+	dt: ['Tuesday, October 20 2019', '4:30pm - 7:00pm'],
+}])
+
+db.userConnections.insertMany([{
+	userId: "user_01",
+	connectionId: "social_01",
+	rsvp: "maybe"
+	},{
+	userId: "user_01",
+	connectionId: "cooking_03",
+	rsvp: "Yes"
+	},{
+	userId: "user_02",
+	connectionId: "social_02",
+	rsvp: "maybe"
+	},{
+	userId: "user_02",
+	connectionId: "cooking_02",
+	rsvp: "Yes"
+	}])
+

@@ -1,0 +1,251 @@
+html,
+body {
+  overflow-y: scroll;
+}
+
+body {
+  /* position: absolute; */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+}
+
+header {
+  background-color: orange;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  overflow: auto;
+}
+
+.user_nav,
+.footerNavigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+}
+
+.nav {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li.connectionsList {
+  text-align: left;
+}
+
+div.connContent {
+  float: left;
+  margin-bottom: 200px;
+}
+
+.activity {
+  float: left;
+  list-style-type: none;
+}
+
+li {
+  float: right;
+}
+
+#firstCol {
+  float: left;
+  margin-left: 300px;
+  margin-top: 100px;
+  width: 400px;
+}
+
+#secondCol {
+  float: right;
+  margin-top: 100px;
+  margin-right: 400px;
+}
+
+#button5,
+#button6,
+#button7,
+#button8 {
+  font-size: 10px;
+  padding: 5px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+}
+
+#button1 {
+  background-color: #4caf50;
+  /* Green */
+  border: none;
+  font-size: 20px;
+  margin: 5px;
+}
+
+#button2 {
+  background-color: red;
+  border: none;
+  font-size: 20px;
+  margin: 5px;
+}
+
+#button3 {
+  background-color: cornflowerblue;
+  border: none;
+  font-size: 20px;
+  margin: 5px;
+}
+
+li.nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.footerNavigation a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.connectionsList {
+  list-style-type: none;
+}
+
+.connectionsList a {
+  display: block;
+  color: black;
+  font-weight: 500;
+  float: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #999;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px;
+  background: #ccc;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.logo {
+  float: left;
+  padding: 0px;
+}
+
+.connections {
+  text-align: left;
+  padding: 10px;
+  margin-top: 3px;
+  background-color: orange;
+}
+
+.connections a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 30px;
+}
+
+#hello {
+  margin: 100px;
+}
+
+div.connContent {
+  margin-left: 400px;
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+}
+
+.space {
+  background-color: black;
+}
+
+article {
+  float: right;
+  padding: 100px;
+  width: 70%;
+  margin-left: 30px;
+}
+
+footer {
+  padding: 0px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: 150px;
+  width: 70%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  height: 80px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#new-form {
+  margin: 100px;
+  margin-right: 700px;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.hey {
+  float: right;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 3px;
+}
+
+h3 {
+  margin-left: 50px;
+}

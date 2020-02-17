@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Zone</title>
+    <link
+      href="/assets/stylesheets/mystyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <% include partials/navigation.ejs%> <% include partials/header.ejs %>
+      <div>
+        <% if (details != undefined) { %> <% details.errors.forEach(function(e){
+        %>
+        <h3><%= e.param %> : <%= e.msg %></h3>
+        <% }); } %>
+        <form id="new-form" action="/newConnection" method="post">
+          <label for="topic"> topic</label>
+          <input type="text" name="topic" placeholder="topic" id="topic" />
+          <label for="name">name</label>
+          <input type="text" name="name" placeholder="name" id="name" />
+          <label for="details">details</label>
+          <input
+            type="text"
+            name="details"
+            placeholder="description"
+            id="details"
+          />
+          <label for="where">where</label>
+          <input type="text" name="where" placeholder="where" id="where" />
+          <label for="when">when</label>
+          <input type="date" name="when" id="when" />
+          <label for="time">Time</label>
+          <input type="text" name="time" placeholder="time" id="time" />
+          <input type="submit" name="new connection" value="new connection" />
+        </form>
+      </div>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

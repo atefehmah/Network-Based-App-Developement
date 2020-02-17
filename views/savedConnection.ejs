@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Food Zone</title>
+      <link href="/assets/stylesheets/mystyle.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <div class="all">
+         <% include partials/navigation.ejs {clicked:clicked} %>
+         <% include partials/header.ejs %>
+         <div>
+            <h2 id="hello"><%= user.firstName%> <%= user.lastName%> connections </h2>
+               <table>
+                     <tr>
+                       <th>Connection</th>
+                       <th>Category</th>
+                       <th>Going?</th>
+                       <th></th>
+                     </tr>
+                     <tr>
+                      
+                      <% connData.forEach(function(d){ %>
+                        <% console.log("EJS", d) %>
+                       <td><%= d.connection[0].name %></td>
+                       <td><%= d.connection[0].topic %></td>
+                       <td><%= d.rsvp %></td>
+                       <td>
+                           <form class="button-line" action="/connection" method="GET">
+                              <input type="hidden" id="connID" name="connID" value="<%= d.connection[0].id %>">
+                              <input id="button5" type="submit" value="Update">
+                            </form>
+                            <form class="button-line" action="/savedConnection" method="GET">
+                              <input type="hidden" id="delConnID" name="delConnID" value="<%= d.connection[0].id %>">
+                              <input id="button6" type="submit" value="Delete">
+                            </form>
+                       </td>
+                     </tr>
+                         <% }); %>
+                   </table>
+         </div>
+         <% include partials/footer.ejs %>
+      </div>
+   </body>
+</html>

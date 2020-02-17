@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Zone</title>
+    <link
+      href="/assets/stylesheets/mystyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <% include partials/navigation.ejs {clicked:clicked}%> <% include
+      partials/header.ejs %>
+
+      <article>
+        <h2>Contact Us!</h2>
+        <p>You can contact through:</p>
+        <p>Email: foodzone@gmail.com</p>
+        <p>Facebook: foodzone</p>
+        <p>Address: 44 University city blvd, Food Zone Center</p>
+      </article>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

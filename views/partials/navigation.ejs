@@ -1,0 +1,12 @@
+<ul class="user_nav">
+<!-- check if clicked is true and display differently  -->
+	<% if (clicked === true) { %>
+    <li class="nav"><a class="active" href="../savedConnection/clearSession">Sign Out</a></li>
+    <li class="nav"><a class="active" href="../savedConnection">My Connections</a></li>
+    <li class="nav"><a href="../newConnection">Start a New Connection</a></li>
+    <% } else {%>
+    <li class="nav"><a class="active" href="../register">Sign Up</a></li>
+    <li class="nav"><a href="../login">Login</a></li>
+    <li class="nav"><a href="../login">Start a New Connection</a></li>
+    <% } %>
+</ul>

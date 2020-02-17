@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+        <meta charset="utf-8">
+        <title>Food Zone</title>
+        <link href="/assets/stylesheets/mystyle.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
+      <div class="all">
+         <% include partials/navigation.ejs {clicked:clicked}%>
+         <% include partials/header.ejs %>
+         
+            <article>
+               <h1>Sorry there is something wrong!</h1>
+               <p> In seems that you asked for an invalid URL </p>
+            </article>
+        <% include partials/footer.ejs %>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Zone</title>
+    <link
+      href="/assets/stylesheets/mystyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <% include partials/navigation.ejs {clicked:clicked} %> <% include
+      partials/header.ejs %>
+
+      <article>
+        <h2>Welcome to Food Zone!</h2>
+        <p>
+          If you are a food enthusiast and you enjoy trying food and culture,
+          you are a member by heart!
+        </p>
+        <p>
+          Come and join us for our events, tours and cooking sessions! We look
+          forward to see you in future events. Join today!
+        </p>
+      </article>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>

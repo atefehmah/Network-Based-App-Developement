@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Zone</title>
+    <link
+      href="/assets/stylesheets/mystyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <% include partials/navigation.ejs%> <% include partials/header.ejs %>
+      <div>
+        <% if (details != undefined) { %> <% details.errors.forEach(function(e){
+        %>
+        <h3><%= e.param %> : <%= e.msg %></h3>
+        <% }); } %>
+        <form id="new-form" action="/register" method="post">
+          <label for="firstname"> First Name</label>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="firstname"
+            id="firstname"
+          />
+          <label for="lastname">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            placeholder="lastname"
+            id="lastname"
+          />
+          <label for="address">Address</label>
+          <input
+            type="text"
+            name="address"
+            placeholder="address"
+            id="address"
+          />
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            placeholder="abc@gmail.com"
+            id="email"
+            value="value"
+          />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" value="value" />
+          <span id="message"></span>
+          <input type="submit" name="register" value="register" />
+        </form>
+      </div>
+      <% include partials/footer.ejs %>
+    </div>
+  </body>
+</html>
